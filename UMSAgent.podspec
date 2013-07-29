@@ -6,7 +6,10 @@ Pod::Spec.new do |s|
   s.homepage = 'https://github.com/SheldonLu/UMSAgent.git'
   s.authors  = {  }
   s.source   = { :git => 'https://github.com/SheldonLu/UMSAgent.git', :tag => '1.3.0' }
-  s.source_files = FileList['UMSAgent/*.{h,m}','UMSAgent/UMSAgent/*.{h,m}','UMSAgent/JSON/*.{h,m}']
+
+  s.source_files = 'UMSAgent/*.{h,m}'
+  s.exclude_files = 'UMSAgent/UMSAgent/*.{h,m}'
+  s.exclude_files = 'UMSAgent/JSON/*.{h,m}'
   s.requires_arc = true
 
   s.ios.deployment_target = '5.0'
